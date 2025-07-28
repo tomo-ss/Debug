@@ -18,7 +18,7 @@
         ["C1", "C2", "C3"],
       ];
 
-      var sampleArrayB = sampleArrayA.reverse().reduce(toOneDimension);
+      var sampleArrayB = sampleArrayA.slice().reverse().reduce(toOneDimension);
 
       for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
         document.write("sampleArrayB[" + counterVar + "]: ");
