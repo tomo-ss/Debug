@@ -9,18 +9,19 @@
         console.log("toOneDimension実行:");
         console.log("previousValue =", previousValue);
         console.log("currentValue =", currentValue);
-        return previousValue.concat(currentValue);
+      //currentValue（現在の数値）を前に置くことで順序を反転
+        return currentValue.concat(previousValue);
       }
       
       var sampleArrayA = [
         ["A1", "A2", "A3"],
         ["B1", "B2", "B3"],
         ["C1", "C2", "C3"],
-        ["D1", "D2", "D3"],
+        //["D1", "D2", "D3"],
         
       ];
 
-      var sampleArrayB = sampleArrayA.slice().reverse().reduce(toOneDimension);
+      var sampleArrayB = sampleArrayA.reduce(toOneDimension);
 
       for (var counterVar = 0; counterVar < sampleArrayB.length; counterVar++) {
         document.write("sampleArrayB[" + counterVar + "]: ");
